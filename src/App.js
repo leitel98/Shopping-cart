@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import Productos from './components/Productos'
 import Layout from './components/Layout'
 import Navbar from './components/Navbar'
@@ -7,9 +7,9 @@ import Title from './components/Title'
 class App extends Component {
   state = {
     productos: [//lista de objetos
-      { name: 'Tomate', price: 1500, img: '/productos/tomate.jpg' },
-      { name: 'Arbejas', price: 2500, img: '/productos/arbejas.jpg' },
-      { name: 'Lechuga', price: 500, img: '/productos/lechuga.jpg' },
+      { name: 'Tomate', price: 1500, img: `${process.env.PUBLIC_URL}/productos/tomate.png` },
+      { name: 'Arvejas', price: 2500, img: `${process.env.PUBLIC_URL}/productos/arbejas.png`},
+      { name: 'Lechuga', price: 500, img: `${process.env.PUBLIC_URL}/productos/lechuga.png` },
     ],
     carro:[],
     esCarroVisible: false,
